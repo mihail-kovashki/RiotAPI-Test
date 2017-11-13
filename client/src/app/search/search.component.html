@@ -1,0 +1,26 @@
+<div >
+  <div>
+    <div class="profile-heading">
+      <h2>Player Found:</h2>
+    </div>
+    <div class="container profile-container">
+        <div *ngIf='!player.notFound' class='col-lg-12 animated fadeIn' >
+          <div class='media movie' >
+            <span class='position pull-left profile-card-index' >1</span >
+            <div class='media-body profile-card-info' >
+              <h4 class='media-heading' >
+                <b class="profile-card-name">{{player.name}} </b>
+              </h4 >
+            </div >
+            <a *ngIf='loggedIn' href="player/{{player.id}}" class="btn btn-info pull-right">See Profile</a>
+            <a *ngIf='!loggedIn' href="users/login" class="btn btn-info pull-right">See Profile</a>
+          </div >
+        </div >
+        <div *ngIf='player.notFound' class='col-lg-12 animated fadeIn' >
+            <div class='media movie' >
+              <h4>Can't find user that matches your search</h4>
+            </div >
+          </div >
+    </div>
+  </div>
+</div >

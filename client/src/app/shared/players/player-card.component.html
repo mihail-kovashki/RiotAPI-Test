@@ -1,0 +1,12 @@
+<div class='col-lg-12 animated fadeIn' >
+  <div class='media movie' >
+    <span class='position pull-left profile-card-index' >{{index + 1}}</span >
+    <div class='media-body profile-card-info' >
+      <h4 class='media-heading' >
+        <b class="profile-card-name">{{player.playerOrTeamName}} </b> - <i>{{player.wins}}/{{player.losses}} </i> <b>{{player.leaguePoints}}</b>
+      </h4 >
+    </div >
+    <a *ngIf='loggedIn' href="player/{{player.playerOrTeamId}}" class="btn btn-info pull-right">See Profile</a>
+    <a *ngIf='!loggedIn' href="users/login" class="btn btn-info pull-right">See Profile</a>
+  </div >
+</div >

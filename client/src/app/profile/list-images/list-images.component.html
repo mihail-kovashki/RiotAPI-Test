@@ -1,0 +1,13 @@
+<div class="profile-heading">
+  <h2>This Users Pictures</h2>
+</div>
+<div *ngIf="profile?.userImages.length > 0" class="container profile-container profile-images-container">
+  <div *ngFor="let image of profile?.userImages" class="profile-image-container">
+    <img [src]="image" class="profile-image"/>
+  </div>
+</div>
+<div *ngIf="profile?.userImages.length === 0" class="container profile-container profile-images-container">
+
+  <h4 *ngIf='isOwnProfile'>Add some <strong>images</strong> to display here</h4>
+  <h4 *ngIf='!isOwnProfile'>This user doesn't have any <strong>images</strong> to display</h4>
+</div>

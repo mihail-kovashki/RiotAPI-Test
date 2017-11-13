@@ -1,0 +1,13 @@
+<div class="profile-heading">
+  <h1>User Inbox</h1>
+</div>
+<div  *ngIf="inboxThreads.length > 0" class="container profile-container">
+  <div *ngFor='let thread of inboxThreads' class="messenger-thread-user">
+    <div *ngFor='let user of thread.users'>
+      <a *ngIf='user !== currentUser' routerLink='/message/send/{{user}}'>{{user}}</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="inboxThreads.length === 0" class="container profile-container">
+  <h4>Send some messages to start chatting</h4>
+</div>

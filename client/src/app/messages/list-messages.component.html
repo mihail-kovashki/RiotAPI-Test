@@ -1,0 +1,30 @@
+<div *ngFor='let message of thread.messages | reverse : thread.messages'>
+  <div *ngIf='message.authorUsername === currentUser' class='message from-me'>
+    <div class='messenger-username'>
+      {{message.authorUsername}}
+    </div>
+    <div class='message-body'>
+      <p>{{message.content}}</p>
+    </div>
+    <div class='messenger-pic'>
+      <img [src]='currentUserProfile.userProfilePicture ? currentUserProfile.userProfilePicture : "https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png"'/>
+      <p class='message-time-right'>{{message.creationDate | date :'shortTime'}}</p>
+    </div>
+  </div>
+
+  <div *ngIf='message.authorUsername !== currentUser' class='message'>
+    <div class='messenger-username'>
+      {{message.authorUsername}}
+    </div>
+
+    <div class='messenger-pic'>
+      <img [src]='secondUserProfile.userProfilePicture ? secondUserProfile.userProfilePicture : "https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png"'/>
+      <p class='message-time-left'>{{message.creationDate | date :'shortTime'}}</p>
+
+    </div>
+
+    <div class='message-body'>
+      <p>{{message.content}}</p>
+    </div>
+  </div>
+</div>

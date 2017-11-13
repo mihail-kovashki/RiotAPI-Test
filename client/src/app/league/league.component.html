@@ -1,0 +1,12 @@
+<div >
+  <div>
+    <div class="profile-heading">
+      <h2>All Players in this League:</h2>
+    </div>
+    <div class="container profile-container">
+      <div *ngFor="let item of allPlayers; let i = index">
+        <player-card [player]="item" [index]="i" ></player-card>
+      </div >
+    </div>
+  </div>
+</div >

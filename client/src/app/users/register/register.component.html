@@ -1,0 +1,135 @@
+<div class="profile-heading">
+  <h1>Register User:</h1>
+</div>
+<div class="container profile-container">
+  <form #registerForm='ngForm' (submit)='register()'>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        name='firstName'
+        [(ngModel)] = 'user.firstName'
+        #firstName='ngModel'
+        required>
+      <span [hidden] = 'firstName.valid || firstName.pristine'>
+        First Name is required!
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        name='name'
+        [(ngModel)] = 'user.lastName'
+        #lastName='ngModel'
+        required>
+      <span [hidden] = 'lastName.valid || lastName.pristine'>
+        Last Name is required!
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name='username'
+        [(ngModel)] = 'user.username'
+        id="username"
+        #username = 'ngModel'
+        required>
+      <span [hidden] = 'username.valid || username.pristine'>
+        Username is required!
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input
+        type="number"
+        pattern='^(1[3456789]|[2-9]\d)$'
+        class="form-control"
+        name='age'
+        [(ngModel)] = 'user.age'
+        id="age"
+        #age = 'ngModel'
+        required>
+      <span [hidden] = 'age.valid || age.pristine'>
+        Age is required and must be between 13 and 99!
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="favouriteChampions">Favourite Champions</label>
+      <textarea
+        #description="ngModel"
+        class="form-control"
+        [(ngModel)]='user.favouriteChampions'
+        id='favouriteChampions'
+        name='favouriteChampions'>
+      </textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select class='radio radio-inline'
+              [(ngModel)]='user.gender'
+              id='gender'
+              name='gender'
+              #gender='ngModel'
+              required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <span [hidden] = 'gender.valid || gender.pristine'>
+        Gender is required!
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name='password'
+        [(ngModel)] = 'user.password'
+        #password = 'ngModel'
+        required>
+      <span [hidden] = 'password.valid || password.pristine'>
+        Password is required!
+      </span>
+      <span [hidden] = '!password.value || password.value.length > 3 || password.pristine'>
+        Password must be at least 4 characters long!
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="confirmPassword"
+        name='confirmPassword'
+        [(ngModel)] = 'user.confirmPassword'
+        #confirmPassword = 'ngModel'
+        required>
+      <span [hidden] = 'password.value === confirmPassword.value || confirmPassword.pristine'>
+        Passwords do not match!
+      </span>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled] = '!registerForm.form.valid || password.value !== confirmPassword.value'>
+      Submit
+    </button>
+
+  </form>
+</div>

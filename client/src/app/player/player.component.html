@@ -1,0 +1,16 @@
+<div class='container profile-container' >
+  <div *ngIf ='player.profileIconId' class='profile-pic' >
+    <img src="http://ddragon.leagueoflegends.com/cdn/7.22.1/img/profileicon/{{player.profileIconId}}.png" />
+  </div >
+  <div *ngIf ='!player.profileIconId' class='profile-pic' >
+    <img src='https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png' />
+  </div >
+  <div class='profile-info clearfix' >
+    <h2 ><strong >Summoner Name: {{player.name}}</strong ></h2 >
+    <h2 ><strong >Summoner Level: {{player.summonerLevel}}</strong ></h2 >
+    <h2 ><strong >Tier: {{player.tier }}</strong ></h2 >
+    <h2 ><strong >League Points: {{player.leaguePoints }}</strong ></h2 >
+    <h2 ><strong >Win/Lose Ratio: {{player.wins}}/{{player.losses}}</strong ></h2 >
+  </div >
+</div >
+

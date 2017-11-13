@@ -1,0 +1,17 @@
+<div class="profile-heading">
+  <h2>This Users Posts</h2>
+</div>
+<div *ngIf="posts?.length > 0" class="container profile-container">
+  <div *ngFor="let post of posts" class="post-body" >
+    <h5 className='media-heading' >
+      <i>Posted on: </i>
+      <strong>{{convertDate(post.dateCreated)}}</strong>
+    </h5>
+    <p class="post-content">{{ post.content }}</p>
+    <button *ngIf='canDelete || currentUserId === post.author._id' class='btn btn-danger' (click)='deletePost(post)'>Delete</button>
+  </div>
+</div>
+<div *ngIf="posts?.length === 0" class="container profile-container">
+  <h4 *ngIf='currentUserId === profileOwnerId'>Add some <strong>posts</strong> to display here</h4>
+  <h4 *ngIf='currentUserId !== profileOwnerId'>This user doesn't have any <strong>posts</strong> to display</h4>
+</div>

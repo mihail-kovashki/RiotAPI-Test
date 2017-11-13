@@ -1,0 +1,43 @@
+<div class="profile-heading">
+  <h1>Make Admin</h1>
+</div>
+<div class="container profile-container">
+  <form #adminForm='ngForm' (submit)='makeAdmin()'>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name='username'
+        [(ngModel)] = 'administrator.name'
+        id="username"
+        #username = 'ngModel'
+        required>
+      <span [hidden] = 'username.valid || username.pristine'>
+      Username is required!
+    </span>
+    </div>
+
+    <button
+      class="btn btn-primary"
+      [disabled] = '!adminForm.form.valid'>
+      Make Admin
+    </button>
+
+  </form>
+</div>
+
+
+<div class="profile-heading">
+  <h2>Current admins:</h2>
+</div>
+<div class="container profile-container" >
+  <ul class='list-group list-unstyled'>
+    <li *ngFor="let admin of admins; let i = index">
+      <profile-card [profile]="admin" [index]="i" ></profile-card >
+    </li>
+  </ul>
+</div>
+
+   
+

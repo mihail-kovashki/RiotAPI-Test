@@ -1,0 +1,30 @@
+<div class="profile-heading">
+  <h1>Edit Description</h1>
+</div>
+<div class="container profile-container">
+  <form (submit)="submitEdit()" #favouriteChampionsForm='ngForm'>
+    <div class='form-group' >
+      <label class='control-label' for="userFavouriteChampions">Your Favourite Champions</label >
+      <textarea
+        #desc="ngModel"
+        [(ngModel)]='userFavouriteChampions'
+        name="userFavouriteChampions"
+        id="userFavouriteChampions"
+        type=this.props.type
+        class='form-control'
+        minlength='1'
+        required></textarea >
+      <span class='help-block' [hidden] = 'desc.valid || desc.pristine'>
+        Favourite champions cannot be less than 1 symbol.
+      </span >
+
+      <input
+        type='submit'
+        class='btn btn-primary'
+        value='Edit Favourites'
+        [disabled] = '!favouriteChampionsForm.form.valid'/>
+
+      <a class='btn btn-default' routerLink='/' >Cancel</a >
+    </div >
+  </form >
+</div >

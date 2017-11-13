@@ -1,0 +1,25 @@
+<div class="profile-heading">
+  <h2>Add Image</h2>
+</div>
+<div class=" container profile-container">
+  <form #addImageForm='ngForm' (submit)='addImage()'>
+    <div class="form-group">
+      <input
+        type="file"
+        accept=".jpg,.jpeg,.png"
+        (change)="fileChange($event)"
+        class="form-control"
+        name='image'
+        id="image"
+        label='Your New Profile Image'
+        required>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-success"
+      [(disabled)] = '!profile.image'>
+      Submit
+    </button>
+  </form>
+</div>

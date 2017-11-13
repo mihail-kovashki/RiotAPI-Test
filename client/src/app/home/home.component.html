@@ -1,0 +1,12 @@
+<div >
+  <div>
+    <div class="profile-heading">
+      <h2>All Champions:</h2>
+    </div>
+    <div class="container profile-container">
+      <div *ngFor="let item of allChampions; let i = index">
+        <champion-card [champion]="item" [index]="i" ></champion-card>
+      </div >
+    </div>
+  </div>
+</div >

@@ -1,0 +1,19 @@
+<div class='col-lg-12 animated fadeIn' >
+  <div class='media movie' >
+    <span class='position pull-left profile-card-index' >{{index + 1}}</span >
+    <div class='profile-card-pic-container'>
+      <img class='profile-card-pic' [src]="profile.profilePicture ? profile.profilePicture : defaultProfilePic" />
+    </div>
+    <div class='media-body profile-card-info' >
+      <h4 class='media-heading' >
+        <b class="profile-card-name">{{profile.firstName}} {{profile.lastName}}</b> - <i>{{profile.age}} years old</i>
+      </h4 >
+    </div >
+    <div><b>About Me:</b></div>
+    {{profile.description}}
+    <a *ngIf='loggedIn' href="user/profile/{{profile._id}}" class="btn btn-info pull-right">See Profile</a>
+    <a *ngIf='!loggedIn' href="users/login" class="btn btn-info pull-right">See Profile</a>
+    <a *ngIf='loggedIn && profile.username !== currentUser' href="message/send/{{profile.username}}" class="btn btn-success pull-right">Send Message</a>
+    <a *ngIf='!loggedIn' href="users/login" class="btn btn-success pull-right">Send Message</a>
+  </div >
+</div >
