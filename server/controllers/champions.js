@@ -1,6 +1,6 @@
 const http = require('https')
 const baseUrl = 'https://euw1.api.riotgames.com/lol/'
-const apiKey = '&api_key=RGAPI-b28f64e3-76d6-4acb-b36b-41e994bd9889'
+const apiKey = '&api_key=RGAPI-6cabd465-4db6-456c-bb6c-5339b9c2b2a1'
 
 module.exports = {
   getAllChampions: (req, res) => {
