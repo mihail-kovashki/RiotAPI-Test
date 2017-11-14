@@ -17,8 +17,4 @@ export class UsersService {
   allUsers() {
     return this.httpService.get('user/all', true);
   }
-
-  getMessageThreads() {
-    return this.httpService.get('user/threads', true);
-  }
 }

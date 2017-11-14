@@ -5,7 +5,6 @@ import {NgModule} from '@angular/core';
 import {CoreModule} from './core/core.module';
 import {UsersModule} from './users/users.module';
 import {CarRoutesModule} from './routes.module';
-import {MessagesModule} from './messages/messages.module';
 
 import {AppComponent} from './app.component';
 import {NgRedux, NgReduxModule} from 'ng2-redux';
@@ -42,7 +41,6 @@ import {PlayerModule} from './player/player.module';
     CoreModule,
     PostsModule,
     ProfileModule,
-    MessagesModule,
     AdminModule,
     SearchModule,
     LeagueModule,

@@ -61,14 +61,4 @@ export class UsersActions {
       });
   }
 
-  userThreads() {
-    this.usersService
-      .getMessageThreads()
-      .subscribe(result => {
-        this.ngRedux.dispatch({
-          type: GET_USER_THREADS,
-          result: result
-        });
-      });
-  }
 }

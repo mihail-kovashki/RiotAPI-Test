@@ -7,8 +7,6 @@ import {RegisterComponent} from './users/register/register.component';
 import {LoginComponent} from './users/login/login.component';
 import {AddPostComponent} from './posts/add-post.component';
 import {ProfileComponent} from './profile/profile.component';
-import {SendMessageComponent} from './messages/send-message.component';
-import {UserInboxComponent} from './users/user-inbox.component';
 import {ProfilePicAddComponent} from './profile/profile-pic-add.component';
 import {EditDescriptionComponent} from './profile/edit-description/edit-description.component';
 import {HomeComponent} from './home/home.component';
@@ -25,7 +23,6 @@ const routes: Routes = [
   { path: 'player/:id', component: PlayerComponent },
   { path: 'users/register', component: RegisterComponent },
   { path: 'users/login', component: LoginComponent },
-  { path: 'users/inbox', component: UserInboxComponent },
   { path: 'search/:searchString', component: SearchComponent },
   {
     path: 'posts/add',
@@ -37,10 +34,6 @@ const routes: Routes = [
     component: ProfileComponent
   },
   { path: 'user/profile-picture/:id', component: ProfilePicAddComponent, canActivate: [PrivateRoute] },
-  {
-    path: 'message/send/:username',
-    component: SendMessageComponent
-  },
   {
     path: 'profile/edit/description',
     component: EditDescriptionComponent,

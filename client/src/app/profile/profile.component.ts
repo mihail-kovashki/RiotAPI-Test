@@ -12,7 +12,6 @@ import {AuthService} from "../core/auth.service";
 })
 export class ProfileComponent implements OnInit {
   isOwnProfile = false;
-  canSendMessage = false;
   profile: ProfileModel = new ProfileModel();
   defaultProfilePic = 'https://cdn3.iconfinder.com/data/icons/security-3-1/512/mask_person-512.png';
 
@@ -38,14 +37,12 @@ export class ProfileComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       const userId = params['id'];
       this.isOwnProfile = userId === this.authService.getUser().id;
-      this.canSendMessage = userId !== this.authService.getUser().id;
       this.profileActions.getProfile(userId);
     });
       // subscribe to router event
       this.activatedRoute.params.subscribe((params: Params) => {
         const userId = params['id'];
         this.isOwnProfile = userId === this.authService.getUser().id;
-        this.canSendMessage = userId !== this.authService.getUser().id;
         this.profileActions.getProfile(userId);
       });
     }
@@ -55,7 +52,4 @@ export class ProfileComponent implements OnInit {
     this.router.navigateByUrl('profile/edit/description');
   }
 
-  sendMessage(username) {
-    this.router.navigateByUrl(`message/send/${username}`);
-  }
 }

@@ -11,13 +11,13 @@
       <span class='icon-bar' ></span >
     </button >
     <a href='/' class='navbar-brand' >
-      Dating Site
+      RiotAPI Test
     </a >
   </div >
   <div id='navbar' class='navbar-collapse collapse' >
     <ul class='nav navbar-nav' *ngIf='!authenticated' >
       <li >
-        <a routerLink='/' >Home</a >
+        <a routerLink='/league/challenger' >Challenger Leaderboards</a >
       </li >
       <li >
         <a routerLink='/users/login' >Login</a >
@@ -29,10 +29,7 @@
 
     <ul class='nav navbar-nav' *ngIf='authenticated' >
       <li >
-        <a routerLink='/' >Home</a >
-      </li >
-      <li >
-        <a routerLink='/users/inbox' >Inbox</a >
+        <a routerLink='/league/challenger' >Challenger Leaderboards</a >
       </li >
       <li>
         <form #searchForm='ngForm' (submit)='search()'>
@@ -43,7 +40,7 @@
             [(ngModel)] = 'searchString'
             id="search"
             #username = 'ngModel'
-            placeholder="Search"
+            placeholder="Search for player"
             required>
           <button
             type="submit"
