@@ -1,3 +1,3 @@
-#Deployment
+# Deployment
 
-simply run command node index.js
+simply run `node index.js`
