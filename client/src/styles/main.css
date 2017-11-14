@@ -3233,25 +3233,25 @@ fieldset[disabled] .btn-success.focus {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #772953;
-  border-color: #772953;
+  background-color: #1d2e51;
+  border-color: #1d2e51;
 }
 .btn-info:focus,
 .btn-info.focus {
   color: #ffffff;
-  background-color: #511c39;
+  background-color: #18bc9c;
   border-color: #180811;
 }
 .btn-info:hover {
   color: #ffffff;
-  background-color: #511c39;
+  background-color: #18bc9c;
   border-color: #491933;
 }
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #511c39;
+  background-color: #18bc9c;
   border-color: #491933;
 }
 .btn-info:active:hover,
@@ -3281,11 +3281,11 @@ fieldset[disabled] .btn-info:focus,
 .btn-info.disabled.focus,
 .btn-info[disabled].focus,
 fieldset[disabled] .btn-info.focus {
-  background-color: #772953;
-  border-color: #772953;
+  background-color: #1d2e51;
+  border-color: #1d2e51;
 }
 .btn-info .badge {
-  color: #772953;
+  color: #1d2e51;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -4168,9 +4168,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-left-radius: 0;
 }
 .navbar {
+  padding: 25px 25px;
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4593,8 +4594,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #772953;
-  border-color: #511c39;
+  background-color: #1d2e51;
+  border-color: #18bc9c;
 }
 .navbar-inverse .navbar-brand {
   color: #ffffff;
@@ -4613,13 +4614,13 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: #3e152b;
+  background-color: #18bc9c;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #511c39;
+  background-color: #18bc9c;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -4628,11 +4629,11 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
-  border-color: #3e152b;
+  border-color: #18bc9c;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #3e152b;
+  background-color: #18bc9c;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -4644,15 +4645,15 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #511c39;
+  background-color: #18bc9c;
   color: #ffffff;
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #511c39;
+    border-color: #18bc9c;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-    background-color: #511c39;
+    background-color: #18bc9c;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
     color: #ffffff;
@@ -4660,13 +4661,13 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #ffffff;
-    background-color: #3e152b;
+    background-color: #18bc9c;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #511c39;
+    background-color: #18bc9c;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4893,11 +4894,11 @@ a.label:focus {
   background-color: #2c8d3a;
 }
 .label-info {
-  background-color: #772953;
+  background-color: #1d2e51;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #511c39;
+  background-color: #18bc9c;
 }
 .label-warning {
   background-color: #efb73e;
@@ -5174,7 +5175,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #772953;
+  background-color: #1d2e51;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6761,7 +6762,7 @@ button.close {
 }
 .navbar-inverse .badge {
   background-color: #fff;
-  color: #772953;
+  color: #1d2e51;
 }
 @media (max-width: 767px) {
   .navbar .dropdown-menu a {
@@ -7470,7 +7471,7 @@ footer {
     bottom: 0;
     width: 100%;
     color: #fff;
-    background-color: #5A133A;
+    background-color: #1d2e51;
 }
 
 footer a {
@@ -7531,7 +7532,7 @@ footer .thumb-md:hover {
 }
 
 .profile-container {
-    background-color: #5A133A;
+    background-color: #1d2e51;
     padding: 15px;
 }
 
@@ -7546,7 +7547,7 @@ footer .thumb-md:hover {
     padding: 10px 15px;
     margin: 5px 0;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .movie .media-body {
@@ -7747,11 +7748,10 @@ footer .thumb-md:hover {
 }
 
 .position {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: bold;
     color: #ddd;
     margin-right: 5px;
-    line-height: 96px;
 }
 
 .btn {
@@ -8427,4 +8427,17 @@ label {
 }
 .user-posts {
   margin-top: 100px;
+}
+
+.navbar-container {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.league-table-categories {
+  opacity: 0.5;
+}
+
+.league-card-info {
+  margin-left: 54px;
 }

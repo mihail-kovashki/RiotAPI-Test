@@ -1,17 +1,25 @@
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      <span class="name">{{profile.userUsername}}'s Profile</span>
+      <hr class="star-light">
+    </div>
+  </div>
+</header>
 <div class='container profile-container' >
   <div class='profile-pic' >
     <img [src]="profile.userProfilePicture ? profile.userProfilePicture : defaultProfilePic" />
   </div >
   <div class='profile-info clearfix' >
-    <h2 ><strong >First Name: {{profile.userFirstName}}</strong ></h2 >
-    <h2 ><strong >Last Name: {{profile.userLastName }}</strong ></h2 >
-    <h2 ><strong >Gender: {{profile.userGender }}</strong ></h2 >
-    <h2 ><strong >Username: {{profile.userUsername}}</strong ></h2 >
-    <h2 ><strong >Age: {{profile.userAge}}</strong ></h2 >
-    <h2 ><strong >Favourite Champions: </strong ></h2 >
+    <p ><strong >First Name: {{profile.userFirstName}}</strong ></p >
+    <p><strong >Last Name: {{profile.userLastName }}</strong ></p >
+    <p><strong >Gender: {{profile.userGender }}</strong ></p >
+    <p><strong >Username: {{profile.userUsername}}</strong ></p >
+    <p><strong >Age: {{profile.userAge}}</strong ></p >
+    <p><strong >Favourite Champions: </strong ></p >
     <p class="profile-description">{{profile.userFavouriteChampions}}</p>
     <div>
-      <button class="btn btn-warning" *ngIf="isOwnProfile" (click)="goToEditPage()">Edit description</button>
+      <button class="btn btn-warning" *ngIf="isOwnProfile" (click)="goToEditPage()">Edit Favourite Champions</button>
       <a routerLink='/posts/add' class='btn btn-success'>Post Something</a>
     </div>
   </div >

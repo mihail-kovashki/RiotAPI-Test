@@ -1,5 +1,5 @@
 <div class="profile-heading">
-  <h2>This Users Pictures</h2>
+  <h2>This Users Screenshots</h2>
 </div>
 <div *ngIf="profile?.userImages.length > 0" class="container profile-container profile-images-container">
   <div *ngFor="let image of profile?.userImages" class="profile-image-container">
@@ -8,6 +8,6 @@
 </div>
 <div *ngIf="profile?.userImages.length === 0" class="container profile-container profile-images-container">
 
-  <h4 *ngIf='isOwnProfile'>Add some <strong>images</strong> to display here</h4>
-  <h4 *ngIf='!isOwnProfile'>This user doesn't have any <strong>images</strong> to display</h4>
+  <h4 *ngIf='isOwnProfile'>Add some <strong>screenshots</strong> to display here</h4>
+  <h4 *ngIf='!isOwnProfile'>This user doesn't have any <strong>screenshots</strong> to display</h4>
 </div>
