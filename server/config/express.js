@@ -4,12 +4,11 @@ const bodyParser = require('body-parser')
 const path = require('path')
 const passport = require('passport')
 const session = require('express-session')
-const swig = require('swig')
-const React = require('react')
-const ReactDOM = require('react-dom/server')
-const Router = require('react-router')
+// const swig = require('swig')
+// const React = require('react')
+// const ReactDOM = require('react-dom/server')
+// const Router = require('react-router')
 const cors = require('cors')
-
 
 module.exports = {
   attachMiddleWares: (app) => {

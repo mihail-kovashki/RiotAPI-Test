@@ -1,6 +1,6 @@
 const http = require('https')
 const baseUrl = 'https://euw1.api.riotgames.com/lol/'
-const apiKey = '?api_key=RGAPI-6cabd465-4db6-456c-bb6c-5339b9c2b2a1'
+const apiKey = '?api_key=RGAPI-c9216659-7bde-45ae-9900-8e79ebf3f0bb'
 
 module.exports = {
   getPlayerByAccId: (req, res) => {
